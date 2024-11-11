@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Q12865_평범한_배낭 {
+public class Q12865_평범한_배낭_backup {
     static class Item{
         int weight;
         int value;
