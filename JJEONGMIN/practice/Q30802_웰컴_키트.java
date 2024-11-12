@@ -19,7 +19,16 @@ public class Q30802_웰컴_키트 {
         st = new StringTokenizer(br.readLine());
         int T = Integer.parseInt(st.nextToken());
         int P = Integer.parseInt(st.nextToken());
+        int count = 0;
 
+        for(int n : size){
+            while(n > 0){
+                n -= T;
+                count++;
+            }
+        }
 
+        System.out.println(count);
+        System.out.println((int)N / P + " " + N % P);
     }
 }
