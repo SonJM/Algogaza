@@ -1,3 +1,6 @@
+import java.util.Queue;
+import java.util.Stack;
+
 public class Q1105_팔 {
     public static void main(String[] args) {
         // 로직 생각
