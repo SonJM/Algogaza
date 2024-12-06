@@ -24,27 +24,34 @@ public class Q10845_큐 {
     }
     public static void execute(String command, int num, Queue<Integer> queue, StringBuilder sb){
         switch (command){
-            case "push" -> queue.offer(num);
-            case "pop" -> sb.append(queue.poll());
-            case "size" -> sb.append(queue.size()).append("\n");
-            case "empty" -> {
+            case "push":
+                queue.offer(num);
+                break;
+            case "pop":
+                if(queue.isEmpty()) sb.append(-1).append("\n");
+                else sb.append(queue.poll()).append("\n");
+                break;
+            case "size":
+                sb.append(queue.size()).append("\n");
+                break;
+            case "empty":
                 if(queue.isEmpty()) sb.append(1).append("\n");
                 else sb.append(0).append("\n");
-            }
-            case "front" -> {
+                break;
+            case "front":
                 if(queue.isEmpty()) sb.append(-1).append("\n");
                 else sb.append(queue.peek()).append("\n");
-            }
-            case "back" -> {
+                break;
+            case "back":
                 if(queue.isEmpty()) sb.append(-1).append("\n");
                 else {
                     for(int i=0; i<queue.size(); i++){
                         int tmp = queue.poll();
                         queue.offer(tmp);
-                        if(i == queue.size()) sb.append(tmp).append("\n");
+                        if(i == queue.size()-1) sb.append(tmp).append("\n");
                     }
                 }
-            }
+                break;
         }
     }
 }
